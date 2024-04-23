@@ -1,24 +1,25 @@
 import logo from './logo.svg';
+import Form from './components/Form';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from './components/NavBar.jsx';
+import LoginParrain from './components/LoginParrain.jsx';
+import AfficherCandidats from './components/AfficherCandidats.jsx'
+import InfosCandidat from './components/InfosCandidat.jsx';
+import Authentification from './components/AuthentificationParrain.jsx';
+import CreerCompte from './components/CreerCompteParrain.jsx';
 import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route exact path="/creer-compte" element={<CreerCompte />} />
+        <Route exact path="/login-parrain" element={<LoginParrain />} />
+        <Route exact path="/authentification" element={<Authentification />} />
+        <Route exact path="/afficher-candidats" element={<AfficherCandidats />} />
+        <Route exact path="/infos-candidat" element={<InfosCandidat />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
