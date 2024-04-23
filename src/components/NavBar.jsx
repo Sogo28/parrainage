@@ -1,4 +1,3 @@
-import Proptypes from 'prop-types';
 let logo = require('../assets/sn.jpg');
 let profile = require('../assets/profile.png');
 let NavBar = () => {

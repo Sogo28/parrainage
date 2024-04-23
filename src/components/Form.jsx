@@ -1,8 +1,5 @@
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'; // Importez Link depuis react-router-dom
 import NavBar from './NavBar';
-
-let logo = require('../assets/hero.jpg');
 
 const Form = () => {
   // Fonction de gestion de la soumission du formulaire
